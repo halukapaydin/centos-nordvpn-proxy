@@ -1,0 +1,12 @@
+[Unit]
+Description=NordVPN init script
+Requires=init-nordvpn.socket
+After=nordvpnd.service
+
+[Service]
+ExecStart=/scripts/init-nordvpn.sh
+NonBlocking=true
+KillMode=process
+
+[Install]
+WantedBy=default.target

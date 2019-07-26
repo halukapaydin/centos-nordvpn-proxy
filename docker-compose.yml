@@ -1,0 +1,23 @@
+version: '2'
+services:
+  centos-nordvpn-proxy:
+    build: .
+    container_name: centos-nordvpn-proxy
+    image: halukapaydin/centos-nordvpn-proxy
+    privileged: true
+    restart: always
+    ports:
+      - "1022:22"
+      - "3128:3128"
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    environment:
+      - USER=user@email.com
+      - PASS='pas$word'
+      - COUNTRY=United_States
+      - PROTOCOL=UDP
+      - CATEGORY=P2P
+      - NETWORK=192.168.1.0/24
+      - OPENVPN_OPTS=--pull-filter ignore "ping-restart" --ping-exit 180
+      - TZ=America/Denver
