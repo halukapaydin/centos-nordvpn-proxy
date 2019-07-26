@@ -1,8 +1,6 @@
 #!/bin/bash
 
-#systemctl restart nordvpnd.service
 touch log.txt
-
 
 SSH_ROOTPASS=${ROOT_PASSWORD}
 echo -e "$SSH_ROOTPASS\n$SSH_ROOTPASS" | (passwd --stdin root)

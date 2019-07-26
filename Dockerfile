@@ -1,6 +1,6 @@
 FROM centos:7
 MAINTAINER halukapaydin@gmail.com
-LABEL Remarks="Centos 7 nordvpn squid"
+LABEL Remarks="Centos 7 nordvpn proxy"
 RUN yum -y install epel-release
 RUN yum -y update
 RUN yum -y install openssh-server systemd passwd openvpn

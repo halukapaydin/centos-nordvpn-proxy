@@ -13,8 +13,8 @@ VPN_USERNAME=$(cat /scripts/vpn-config/username.conf)
 VPN_PASSWORD=$(cat /scripts/vpn-config/password.conf)
 VPN_COUNTRY=$(cat /scripts/vpn-config/country.conf)
 
-nordvpn login -u ${VPN_USERNAME} -p ${VPN_PASSWORD}  >> log.txt
+#nordvpn login -u ${VPN_USERNAME} -p ${VPN_PASSWORD}  >> log.txt
 
-nordvpn connect ${VPN_COUNTRY} >> log.txt
+#nordvpn connect ${VPN_COUNTRY} >> log.txt
 
 

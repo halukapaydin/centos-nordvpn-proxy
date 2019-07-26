@@ -1,2 +1,2 @@
 #!/bin/bash
-docker  build  -t "tscope/centos-nordvpn-squid" .
+docker  build -t "halukapaydin/centos-nordvpn-proxy" .
