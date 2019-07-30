@@ -21,7 +21,7 @@ services:
       - 8.8.8.8
       - 8.8.4.4
     environment:
-      - VPN_USERNAME=vpn@agmlab.com
-      - VPN_PASSWORD=vpnagm135
-      - VPN_COUNTRY=Germany
+      - VPN_USERNAME=asd@ad.com
+      - VPN_PASSWORD=passs
+      - VPN_COUNTRY=Turkey
       - ROOT_PASSWORD=12345
