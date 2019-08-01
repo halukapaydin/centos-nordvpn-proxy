@@ -1,5 +1,5 @@
 # centos-nordvpn-proxy
-This is a NordVPN client and Squid proxy (no cache) and centos 7 docker container.
+This is a NordVPN client, Squid proxy server(no cache) and Centos 7 docker image.
 
 ## Building image
 ```
