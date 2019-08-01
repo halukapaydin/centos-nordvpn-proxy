@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run --privileged -tid --device=/dev/net/tun --dns=8.8.8.8 -p 3128:3128 -p 1022:22 -e VPN_USERNAME=abc@xyz.com -e VPN_PASSWORD=password -e VPN_COUNTRY=Turkey -e ROOT_PASSWORD=12345 -d halukapaydin/centos-nordvpn-proxy
+docker run --hostname vpn-proxy --privileged -tid --device=/dev/net/tun --dns=8.8.8.8 -p $1:3128 --env-file=.env halukapaydin/centos-nordvpn-proxy bash
