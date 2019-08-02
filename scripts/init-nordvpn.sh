@@ -26,8 +26,22 @@ then
 fi
 
 echo "username : $VPN_USERNAME , password : $VPN_PASSWORD, country : $VPN_COUNTRY"
-nordvpn login -u $VPN_USERNAME -p $VPN_PASSWORD
-nordvpn connect $VPN_COUNTRY
+
+ERROR=$(nordvpn login -u $VPN_USERNAME -p $VPN_PASSWORD 2>&1 > /dev/null)
+
+if [[ ! -z "$ERROR" ]]
+then
+      echo "$ERROR"
+      exit 0
+fi
+
+ERROR=$(nordvpn connect $VPN_COUNTRY 2>&1 > /dev/null)
+
+if [[ ! -z "$ERROR" ]]
+then
+      echo "$ERROR"
+      exit 0
+fi
 
 squid &
 
